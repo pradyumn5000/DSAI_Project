@@ -30,8 +30,8 @@ async function getPlaylistTracks(playlistId) {
   
   console.log("---------------+++++++++++++++++++++++++")
   const tracksJSON = { tracks }
-  let data = JSON.stringify(tracksJSON);
-  fs.writeFileSync(playlistId+'.json', data);
+  let data1 = JSON.stringify(tracksJSON);
+  fs.writeFileSync(playlistId+'.json', data1);
 }
 
 getPlaylistTracks('7eWew4DoxwxMfIH8mZVej4');
