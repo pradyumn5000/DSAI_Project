@@ -1,18 +1,44 @@
 const fs = require('fs')
 const SpotifyWebApi = require('spotify-web-api-node');
-const token = "BQCI3ggEePDpfJdsFVeMPSvYJ5CjMI58b24iBIfOUojCqz21CTFDqaY41NMRlXzI64VHsYvAwqt2MnjcqTme8fl3nu5Bi6XLgzAD24wrE4Ps0eYCj5LFfqufRpQtk_DIBBZV6aoI0hA8jW9xHQHb2HOG5ihxxEy2WHbDWdyM4fwDKwx694aYIB6-9wIxE1TIM7zN6Pf4zvUu_DSvGi5t1ohyZEj6WE4bS1rSDnikcE6ZH1332cQ1iKSIcJk4bQpGhIbRXgSEEDwTJVOC5YNybC_7K8Z_rNgNaew";
+const token = "BQAlLzzQ5jan4rQU0PErpM9xiGSa9_UK6cdH-rT22U-zUPYleIJrrfsT2i_JvCyuSvNBjUzvdrSh1ZE5g-L1ZsnN8MK5ngL6eKP1oxxji5aWJdDIDCCXHigTv17j4IXyW3U7e1s-b6BUeBObP3O5jO0i1kEnN39Cty_NRl-YcTxFxE2c2TT3ZoJEvlAS7NubR8i6KcOaSGQB2mCiAVsdOI8_6te85aOOS3462zCvA_RHold_9QNax54gln7PWh5RwF2RVJXrGAE6CXmeEKgfO0A7bk26BbRWC2c";
 
 const spotifyApi = new SpotifyWebApi();
 spotifyApi.setAccessToken(token);
 
+//GET MY PROFILE DATA
+function getMyData() {
+  (async () => {
+    const me = await spotifyApi.getMe();
+    // console.log(me.body);
+    getUserPlaylists(me.body.id);
+  })().catch(e => {
+    console.error(e);
+  });
+}
 
-
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 //GET SONGS FROM PLAYLIST
-async function getPlaylistTracks(playlistId) {
+function driver(playlistId) {(async () => {
+  final = [];
+  for (let i = 0; i < 9901; i = i+100) {
+    let track = await getPlaylistTracks(playlistId,i);
+    final.push(track);
+    await delay(15000);
+  }
+  console.log("---------------+++++++++++++++++++++++++")
+  const tracksJSON = { final }
+    let data1 = JSON.stringify(tracksJSON);
+    fs.writeFileSync(playlistId+'.json', data1);
+  })().catch(e => {
+  console.error(e);
+  });
+}
 
+
+async function getPlaylistTracks(playlistId, x) {
   const data = await spotifyApi.getPlaylistTracks(playlistId, {
-    offset: 1,
+    offset: x,
     limit: 100,
     fields: 'items'
   })
@@ -23,15 +49,19 @@ async function getPlaylistTracks(playlistId) {
   let tracks = [];
 
   for (let track_obj of data.body.items) {
-    const track = track_obj.track
-    tracks.push(track);
-    // console.log(track.name + " : " + track.artists[0].name)
+    const track = track_obj.track;
+    let track_data = await getTrack(track.id);
+    // console.log(track_data);
+    console.log(track.name)
+    const final = Object.assign(track,track_data.body);
+    tracks.push(final);
   }
-  
-  console.log("---------------+++++++++++++++++++++++++")
-  const tracksJSON = { tracks }
-  let data1 = JSON.stringify(tracksJSON);
-  fs.writeFileSync(playlistId+'.json', data1);
+  return tracks;
 }
 
-getPlaylistTracks('7eWew4DoxwxMfIH8mZVej4');
+async function getTrack(songid) {
+  const data = await spotifyApi.getAudioFeaturesForTrack(songid);
+  return data;
+}
+
+driver('5S8SJdl1BDc0ugpkEvFsIL');
