@@ -34,7 +34,7 @@ Plotting a correlation heatmap showed no significant linear relationship between
 
 For categorical variable datasets only had one variable that may be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.😟
 
-For our lyrics data, we removed common stop words such as 'I', 'is', 'are'.
+For our lyrics data, we removed common stop words such as 'I', 'is', 'are'. Then, we plotted the most common words, many of which are linked to emotions of love like "love", "feel", "girl" and "baby".
 
 ## Models Used
 To find the model that best predicts popularity, we tried 3 different machine learning techniques on the numerical variables. 
