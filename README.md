@@ -98,11 +98,11 @@ With 2 types of models having similar performance, 1 based on numerical variable
 
 Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. 
 
-Record labels can use our model to predict the potential popularity of a song before investing, and also focus on the important variables during our song-writing process. Another potential use would be by streaming companies like Spotify to use our model to spot 'underrated' songs that is low in actual popularity but high in predicted popularity!
-
 Some limitations of our model:
 1. Taste and preferences may change over time. Musical features that didn’t appear prevalent in our models may become significant in predicting the song’s popularity in the future, leading to model inaccuracy⬇📉
 2. Different demographics. Our datasets were scraped from Spotify's Global Charts and did not take into account of different demographics. Music that is popular in one country may not be as popular in another country.⬇📉
+
+Overall, Record labels can use our model to predict the potential popularity of a song before investing, and also focus on the important variables during our song-writing process. Another potential use would be by streaming companies like Spotify to use our model to spot 'underrated' songs that is low in actual popularity but high in predicted popularity!
 
 ## Contributors
 - Pradyumn: Data Extraction, Cleaning, Merging & Neural Networks
