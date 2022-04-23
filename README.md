@@ -32,7 +32,7 @@ To carry out EDA, we separated datasets into numerical variables only, and categ
 Plotting a correlation heatmap showed no significant linear relationship between popularity and other variables such as tempo and acousticness. This was understandable as simply maximising a musical feature does not guarantee a popular song. We hypothesized that there exists non-linear relationships between the response variables and predictor popularity variable.
 
 
-After separation, the categorical variable datasets only had one variable that could be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.😟
+For categorical variable datasets only had one variable that may be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.😟
 
 For our lyrics data, we removed common stop words such as 'I', 'is', 'are'.
 
