@@ -25,7 +25,35 @@ Features include:
 The features of songs, including the popularity, are first extracted from Spotify's API with 10,880 songs. We cleaned this data by removing duplicated rows, any rows with null values,  irrelevant columns such as URL, and songs with '0' popularity.
 
 
-However, the dataset did not include lyrics of the songs. Thus, we found another dataset on Kaggle containing 4,169 songs with lyrics. This dataset came along with another dataset containing artist popularities and the number of songs by the artist. After cleaning these datasets, using the song's name and artist name present in all 3 datasets, we merged them together to obtain a dataset with ~1400 songs.
+However, the dataset did not include lyrics of the songs. Thus, we found another dataset on Kaggle containing 4,169 songs with lyrics. This dataset came along with another dataset containing artist popularities and the number of songs by the artist. After cleaning these datasets, using the song's name and artist name present in all 3 datasets, we merged them together to obtain a dataset with ~1300 songs.
+
+Information about each column can be found below. (Note: the values stated are before Min-Max Normalization)
+
+ 1   album_name          object  - Name of the album
+ 2   release_date        object  - Date of release of the album in the format YYYY/MM/DD
+ 3   artist_name         object  - Name of the artist
+ 4   explicit            object  - True/False value describing if a song is explicit or not
+ 5   song_name           object  - Name of the song
+ 6   lyrics              object  - Lyrics of the song
+ 7   language            object  - Language of the lyrics of the song for eg. en(english)
+ 8   album_total_tracks  float64 - Total number of tracks in the album
+ 9   duration_ms         float64 - The duration of the track in milliseconds.
+ 10  popularity          float64 - The popularity of the track. The value will be between 0 and 100, with 100 being the most popular.
+The popularity of a track is a value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.
+ 11  danceability        float64 - Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.
+ 12  energy              float64 - Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.
+ 13  key                 float64 - The key the track is in. Integers map to pitches using standard Pitch Class notation. E.g. 0 = C, 1 = C♯/D♭, 2 = D, and so on. If no key was detected, the value is -1.
+ 14  loudness            float64 - The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typically range between -60 and 0 db.
+ 15  mode                float64 - Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived. Major is represented by 1 and minor is 0.
+ 16  speechiness         float64 - Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.
+ 17  acousticness        float64 - A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.
+ 18  instrumentalness    float64 - Predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly "vocal". The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.
+ 19  liveness            float64 - Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.
+ 20  valence             float64 - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+ 21  tempo               float64 - The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.
+ 22  time_signature      float64 - An estimated time signature. The time signature (meter) is a notational convention to specify how many beats are in each bar (or measure). The time signature ranges from 3 to 7 indicating time signatures of "3/4", to "7/4".
+ 23  artist_songs        float64 - Number of songs the artist has released
+ 24  artist_popularity   float64 - The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.
 
 The cleaned and raw datasets(csv) can found in the [Datasets](https://github.com/pradyumn5000/DSAI_Project/blob/main/Datasets) folder
 
