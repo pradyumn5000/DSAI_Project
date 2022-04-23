@@ -27,9 +27,11 @@ The features of songs, including the popularity, are first extracted from Spotif
 However, the dataset did not include lyrics of the songs. Thus, we found another dataset on Kaggle containing 4,169 songs with lyrics. After cleaning this dataset, using the song's name present in both datasets, we merged them together to obtain a dataset with ~1400 songs.
 
 ## Exploratory Data Analysis
-To carry out EDA, we separated datasets into numerical variables only, and categorical variables only.
+To carry out EDA, we separated our dataset into 
+1. numerical variables only
+2. categorical variables + popularity
 
-Plotting a correlation heatmap showed no significant linear relationship between popularity and other variables such as tempo and acousticness. This was understandable as simply maximising a musical feature does not guarantee a popular song. We hypothesized that there exists non-linear relationships between the response variables and predictor popularity variable.
+Plotting a correlation heatmap showed no significant linear relationship between popularity and other variables such as tempo and acousticness. This was understandable as creating a song is complicated and simply maximising a musical feature does not guarantee a popular song. We hypothesized that there exists non-linear relationships between the response variables and predictor popularity variable.
 
 
 For categorical variable datasets only had one variable that may be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.😟
