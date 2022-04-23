@@ -58,9 +58,15 @@ Between Random Forest and Neural Networks, we found that Neural Networks gave sl
 Neural Networks with our lyrics dataset implied that the lyrics of a song was equally important in predicting popularity, along with the important numerical variable we have found.
 
 ## Conclusion
-With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is best to use both models to get a more holistic prediction.
+With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is possible to quantitatively predict popularity given its features and lyrics (±0.17 error), using machine learning techniques. We recommend to use both models to get a more holistic and complete prediction👍
 
-Our models have also given insights into variables that make up a popular songs, with the top three being: 
+
+Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. We will leave this up to the big-name data scientists at Spotify.
+
+Limitations:
+1. Taste and preferences may change over time. Musical features that didn’t appear prevalent in our models may become significant in predicting the song’s popularity in the future, leading to model inaccuracy⬇📉
+2. Different demographics. Our datasets were scraped from Spotify's Global Charts and did not take into account of different demographics. Music that is popular in one country may not be as popular in another country.⬇📉
 
 ## Contributors
 
+## References
