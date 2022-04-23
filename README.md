@@ -37,17 +37,16 @@ After separation, the categorical variable datasets only had one variable that c
 For our lyrics data, we removed common stop words such as 'I', 'is', 'are'.
 
 ## Models Used
+To find the model that best predicts popularity, we tried 3 different machine learning techniques on the numerical variables. 
 1. Multivariate Regression
 2. Random Forest Regression
 3. Neural Networks with Numerical Variables
-4. Neural Networks with NLP
 
-
-To find the model that best predicts popularity, we tried 3 different machine learning techniques on the numerical variables. 
 
 The result was that Neural Networks = Random Forest > Multivariate Regression, with Neural Networks giving Absolute Mean Error of +/-0.17 where popularity ranges from 0 to 1.
 
-Neural Networks with NLP performed similarly to Neural Networks with Numerical Variables.
+
+Then we tried Neural Networks with NLP, where it performed similarly to Neural Networks with Numerical Variables (±0.19 AME).
 
 ## Evaluation of Models
 The results showed that Multivariate Regression was the worst performing model out of the three. This fits our hypothesis of non-linearity relationship between variables.
@@ -55,10 +54,10 @@ The results showed that Multivariate Regression was the worst performing model o
 Between Random Forest and Neural Networks, we found that Neural Networks gave slightly better results of -0.01~0.03. However, one benefit of Random Forest is that we were able to see the weight of each variables in predicting popularity, giving important insights into what really makes up a popular song. Whereas for Neural Network, we were not able to see the weights given to each variables due to the hidden layers and black-box nature of Neural Networks.
 
 
-Neural Networks with our lyrics dataset implied that the lyrics of a song was equally important in predicting popularity, along with the important numerical variable we have found.
+Neural Networks with our lyrics dataset performed similarly to our best numerical variable models. This would imply that the lyrics of a song was equally important in predicting popularity.
 
 ## Conclusion
-With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is possible to quantitatively predict popularity given its features and lyrics (±0.17 error), using machine learning techniques. We recommend to use both models to get a more holistic and complete prediction👍
+With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is possible to quantitatively predict popularity given its features and lyrics (±0.17 error), using machine learning techniques. We recommend to use both models and compute the average to get a more holistic and complete prediction👍
 
 
 Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. We will leave this up to the big-name data scientists at Spotify.
