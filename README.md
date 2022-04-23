@@ -60,7 +60,7 @@ Neural Networks with our lyrics dataset performed similarly to our best numerica
 With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is possible to quantitatively predict popularity given its features and lyrics (±0.17 error), using machine learning techniques. We recommend to use both models and compute the average to get a more holistic and complete prediction👍
 
 
-Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. We will leave this up to the big-name data scientists at Spotify.
+Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. 
 
 Limitations:
 1. Taste and preferences may change over time. Musical features that didn’t appear prevalent in our models may become significant in predicting the song’s popularity in the future, leading to model inaccuracy⬇📉
