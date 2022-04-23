@@ -29,7 +29,7 @@ However, the dataset did not include lyrics of the songs. Thus, we found another
 
 Information about each column can be found below. (Note: the values stated are before Min-Max Normalization)
 
- 1.   album_name          object  - Name of the album
+ 1.   album_name										object  - Name of the album
  2.   release_date        object  - Date of release of the album in the format YYYY/MM/DD
  3.   artist_name         object  - Name of the artist
  4.   explicit            object  - True/False value describing if a song is explicit or not
