@@ -44,9 +44,11 @@ To find the model that best predicts popularity, we tried 3 different machine le
 
 
 **Result: Neural Networks >= Random Forest > Multivariate Regression**
+
 Absolute Mean Error (Neural Network): ±0.17 (Predictor Range: 0.00-1.00)
 
-Then we tried Neural Networks with NLP, where it performed similarly to Neural Networks with Numerical Variables (±0.19 AME).
+
+For our lyrics dataset, we tried Neural Networks with NLP, where it performed similarly to Neural Networks with Numerical Variables (±0.19 AME).
 
 ## Evaluation of Models
 The results showed that Multivariate Regression was the worst performing model out of the three. This fits our hypothesis of non-linearity relationship between variables.
