@@ -32,7 +32,7 @@ To carry out EDA, we separated datasets into numerical variables only, and categ
 Plotting a correlation heatmap showed no significant linear relationship between popularity and other variables such as tempo and acousticness. This was understandable as simply maximising a musical feature does not guarantee a popular song. We hypothesized that there exists non-linear relationships between the response variables and predictor popularity variable.
 
 
-After separation, the categorical variable datasets only had one variable that could be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.
+After separation, the categorical variable datasets only had one variable that could be a response variable to popularity - explicit (true/false). Boxplot and strip plot gave interesting results with explicit songs appearing likely to be more popular. However, the low count of explicit songs compared to non-explicit songs and high variance make it inconclusive.😟
 
 For our lyrics data, we removed common stop words such as 'I', 'is', 'are'.
 
@@ -43,8 +43,8 @@ To find the model that best predicts popularity, we tried 3 different machine le
 3. Neural Networks with Numerical Variables
 
 
-The result was that Neural Networks = Random Forest > Multivariate Regression, with Neural Networks giving Absolute Mean Error of +/-0.17 where popularity ranges from 0 to 1.
-
+**Result: Neural Networks >= Random Forest > Multivariate Regression**
+Absolute Mean Error (Neural Network): ±0.17 (Predictor Range: 0.00-1.00)
 
 Then we tried Neural Networks with NLP, where it performed similarly to Neural Networks with Numerical Variables (±0.19 AME).
 
