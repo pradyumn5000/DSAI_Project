@@ -39,7 +39,7 @@ The result was that Neural Networks >= Random Forest > Multivariate Regression
 
 ## Evaluation of Models
 
-## Learning Outcomes
+## Conclusion
 
 ## Contributors
 
