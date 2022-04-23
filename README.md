@@ -27,6 +27,8 @@ The features of songs, including the popularity, are first extracted from Spotif
 
 However, the dataset did not include lyrics of the songs. Thus, we found another dataset on Kaggle containing 4,169 songs with lyrics. This dataset came along with another dataset containing artist popularities and the number of songs by the artist. After cleaning these datasets, using the song's name and artist name present in all 3 datasets, we merged them together to obtain a dataset with ~1400 songs.
 
+The cleaned and raw datasets(csv) can found in the [Datasets](https://github.com/pradyumn5000/DSAI_Project/blob/main/Spotify_API) folder
+
 ## Exploratory Data Analysis
 To carry out EDA, we separated our dataset into 
 1. numerical variables only
