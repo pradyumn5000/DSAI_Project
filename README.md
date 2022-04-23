@@ -37,3 +37,9 @@ To find the model that best predicts popularity, we tried 3 different machine le
 
 The result was that Neural Networks >= Random Forest > Multivariate Regression
 
+## Evaluation of Models
+
+## Learning Outcomes
+
+## Contributors
+
