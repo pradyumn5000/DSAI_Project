@@ -26,6 +26,16 @@ The features of songs, including the popularity, are first extracted from Spotif
 
 However, the dataset did not include lyrics of the songs. Thus, we found another dataset on Kaggle containing 4,169 songs with lyrics. After cleaning this dataset, using the song's name present in both datasets, we merged them together to obtain a dataset with ~1400 songs.
 
+## Exploratory Data Analysis
+To carry out EDA, we separated datasets into numerical variables only, and categorical variables only.
+
+Plotting a correlation heatmap showed no significant linear relationship between popularity and other variables such as tempo and acousticness. This was understandable as simply maximising a musical feature does not guarantee a popular song. We hypothesized that there exists non-linear relationships between the response variables and predictor popularity variable.
+
+
+After separation, the categorical variable datasets only had one variable that could be a response variable to popularity - explicit (true/false).
+
+For our lyrics data, we removed common stop words such as 'I', 'is', 'are'.
+
 ## Models Used
 1. Multivariate Regression
 2. Random Forest Regression
@@ -35,11 +45,22 @@ However, the dataset did not include lyrics of the songs. Thus, we found another
 
 To find the model that best predicts popularity, we tried 3 different machine learning techniques on the numerical variables. 
 
-The result was that Neural Networks >= Random Forest > Multivariate Regression
+The result was that Neural Networks = Random Forest > Multivariate Regression, with Neural Networks giving Absolute Mean Error of +/-0.17 where popularity ranges from 0 to 1.
+
+Neural Networks with NLP performed similarly to Neural Networks with Numerical Variables.
 
 ## Evaluation of Models
+The results showed that Multivariate Regression was the worst performing model out of the three. This fits our hypothesis of non-linearity relationship between variables.
+
+Between Random Forest and Neural Networks, we found that Neural Networks gave slightly better results of -0.01~0.03. However, one benefit of Random Forest is that we were able to see the weight of each variables in predicting popularity, giving important insights into what really makes up a popular song. Whereas for Neural Network, we were not able to see the weights given to each variables due to the hidden layers and black-box nature of Neural Networks.
+
+
+Neural Networks with our lyrics dataset implied that the lyrics of a song was equally important in predicting popularity, along with the important numerical variable we have found.
 
 ## Conclusion
+With 2 types of models having similar performance, 1 based on numerical variables, another based on lyrics, we conclude that it is best to use both models to get a more holistic prediction.
+
+Our models have also given insights into variables that make up a popular songs, with the top three being: 
 
 ## Contributors
 
