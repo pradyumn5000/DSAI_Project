@@ -117,3 +117,8 @@ Overall, Record labels can use our model to predict the potential popularity of 
 - Wei Xu: EDA, Random Forest
 - Ranjan: Multivariate Regression, Presentation
 ## References
+- https://developer.spotify.com/documentation/web-api/reference/#/
+- https://www.kaggle.com/datasets/neisse/scrapped-lyrics-from-6-genres?resource=download
+- https://realpython.com/python-ai-neural-network/
+- https://github.com/SpencerPao/Natural-Language-Processing
+- https://github.com/keras-team/keras
