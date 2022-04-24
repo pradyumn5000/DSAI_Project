@@ -22,6 +22,14 @@ Features include:
 2. Categorical: explicit (true/false)
 3. Lyrics: language
 
+## Notes
+The `requirements.txt` file should list all Python libraries that your notebooks
+depend on, and they will be installed using:
+
+```
+pip install -r requirements.txt
+```
+
 ## Data Extraction, Cleaning, Merging
 The features of songs, including the popularity, are first extracted from Spotify's API with 10,880 songs. We cleaned this data by removing duplicated rows, any rows with null values,  irrelevant columns such as URL, and songs with '0' popularity.
 
