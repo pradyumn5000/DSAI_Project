@@ -122,3 +122,4 @@ Overall, Record labels can use our model to predict the potential popularity of 
 - https://realpython.com/python-ai-neural-network/
 - https://github.com/SpencerPao/Natural-Language-Processing
 - https://github.com/keras-team/keras
+- https://machinelearningmastery.com/calculate-feature-importance-with-python/
