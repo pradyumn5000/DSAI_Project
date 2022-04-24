@@ -23,8 +23,8 @@ Features include:
 3. Lyrics: language
 
 ## Notes
-The `requirements.txt` file should list all Python libraries that your notebooks
-depend on, and they will be installed using:
+The `requirements.txt` file should list all Python libraries that the notebooks
+depend on, and can be installed using:
 
 ```
 pip install -r requirements.txt
