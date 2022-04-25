@@ -106,6 +106,8 @@ With 2 types of models having similar performance, 1 based on numerical variable
 
 Our models have also given insights into variables that make up a popular song, with the top three being: Artist's Popularity, Speechiness, Danceability. However, we did not test for all factors that could influence popularity. This could includes the amount of promotions different songs had, the quality of music video and more, which could account for our ±0.17 error. 
 
+The lyrics of a song can also help to predict the popularity of a song with a mean absolute error of ±0.19, which is comparable to the machine learning models which used the numerical data. Although the mean absolute error and RMSE are higher, we believe that the lyrics of a song are still a major factor in determining the popularity of the song, as seen from the relatively low RMSE and absolute error.
+
 Some limitations of our model:
 1. Taste and preferences may change over time. Musical features that didn’t appear prevalent in our models may become significant in predicting the song’s popularity in the future, leading to model inaccuracy⬇📉
 2. Different demographics. Our datasets were scraped from Spotify's Global Charts and did not take into account of different demographics. Music that is popular in one country may not be as popular in another country.⬇📉
